@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Grade Calculator</title>
+<style>
+  * { box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+  body {
+    margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, #1a2b4c, #2c5282); padding: 20px;
+  }
+  .container {
+    background: white; padding: 0; border-radius: 14px; overflow: hidden;
+    width: 100%; max-width: 460px; box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  }
+  .header {
+    background: linear-gradient(135deg, #2c5282, #1a2b4c); color: white;
+    padding: 30px 25px; text-align: center;
+  }
+  .header h2 { margin: 0; font-size: 24px; }
+  .header p { margin: 6px 0 0; font-size: 13px; opacity: 0.8; }
+  .body { padding: 25px; }
+  .input-group { margin-bottom: 14px; }
+  .input-group label { display: block; font-size: 13px; font-weight: 600; color: #555; margin-bottom: 5px; }
+  input {
+    width: 100%; padding: 12px; border: 1.5px solid #e0e0e0; border-radius: 8px;
+    font-size: 15px; transition: border 0.2s;
+  }
+  input:focus { outline: none; border-color: #2c5282; }
+  button {
+    width: 100%; padding: 14px; background: linear-gradient(135deg, #2c5282, #1a2b4c);
+    color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px;
+    font-weight: 600; margin-top: 8px; transition: transform 0.2s;
+  }
+  button:hover { transform: translateY(-2px); }
+  #result {
+    margin-top: 20px; padding: 18px; border-radius: 10px; background: #f0f4f8;
+    display: none; animation: fadeIn 0.4s ease;
+  }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+  .result-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #e0e0e0; font-size: 14px; }
+  .result-row:last-child { border-bottom: none; }
+  .grade-badge {
+    display: inline-block; padding: 3px 12px; border-radius: 20px; font-weight: 700;
+    background: #2c5282; color: white; font-size: 13px;
+  }
+  .pass { color: #2f9e44; font-weight: 700; }
+  .fail { color: #e03131; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <h2>📊 Grade Calculator</h2>
+    <p>Enter marks for 5 subjects to get your result</p>
+  </div>
+  <div class="body">
+    <div class="input-group"><label>Subject 1</label><input type="number" id="sub1" placeholder="0 - 100"></div>
+    <div class="input-group"><label>Subject 2</label><input type="number" id="sub2" placeholder="0 - 100"></div>
+    <div class="input-group"><label>Subject 3</label><input type="number" id="sub3" placeholder="0 - 100"></div>
+    <div class="input-group"><label>Subject 4</label><input type="number" id="sub4" placeholder="0 - 100"></div>
+    <div class="input-group"><label>Subject 5</label><input type="number" id="sub5" placeholder="0 - 100"></div>
+
+    <button onclick="calculateGrade()">Calculate Result</button>
+
+    <div id="result"></div>
+  </div>
+</div>
+
+<script src="q4_script.js"></script>
+</body>
+</html>
