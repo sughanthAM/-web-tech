@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Admission Form</title>
+<link rel="stylesheet" href="q2_style.css">
+</head>
+<body>
+
+<div class="form-container">
+  <h1>Student Admission Form</h1>
+
+  <form>
+    <!-- Text input -->
+    <div class="form-group">
+      <label for="fname">Full Name</label>
+      <input type="text" id="fname" name="fname" placeholder="Enter your full name" required>
+    </div>
+
+    <!-- Email input -->
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+    </div>
+
+    <!-- Number input -->
+    <div class="form-group">
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="10-digit number" required>
+    </div>
+
+    <!-- Date input -->
+    <div class="form-group">
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" required>
+    </div>
+
+    <!-- Radio buttons -->
+    <div class="form-group">
+      <label>Gender</label>
+      <input type="radio" id="male" name="gender" value="male"><label for="male" class="inline">Male</label>
+      <input type="radio" id="female" name="gender" value="female"><label for="female" class="inline">Female</label>
+      <input type="radio" id="other" name="gender" value="other"><label for="other" class="inline">Other</label>
+    </div>
+
+    <!-- Dropdown -->
+    <div class="form-group">
+      <label for="course">Course</label>
+      <select id="course" name="course" required>
+        <option value="">-- Select Course --</option>
+        <option value="cse">Computer Science Engineering</option>
+        <option value="ece">Electronics & Communication</option>
+        <option value="mech">Mechanical Engineering</option>
+        <option value="civil">Civil Engineering</option>
+      </select>
+    </div>
+
+    <!-- Range input -->
+    <div class="form-group">
+      <label for="marks">Previous Academic Percentage: <span id="marksVal">75</span>%</label>
+      <input type="range" id="marks" name="marks" min="0" max="100" value="75"
+             oninput="document.getElementById('marksVal').innerText=this.value">
+    </div>
+
+    <!-- File upload -->
+    <div class="form-group">
+      <label for="photo">Upload Passport Photo</label>
+      <input type="file" id="photo" name="photo" accept="image/*">
+    </div>
+
+    <!-- Textarea -->
+    <div class="form-group">
+      <label for="address">Address</label>
+      <textarea id="address" name="address" rows="3" placeholder="Enter your address"></textarea>
+    </div>
+
+    <!-- Checkbox -->
+    <div class="form-group">
+      <input type="checkbox" id="terms" name="terms" required>
+      <label for="terms" class="inline">I agree to the terms and conditions</label>
+    </div>
+
+    <!-- Media element -->
+   <!-- Media element -->
+<div class="form-group">
+  <label>College Campus (Image Preview)</label>
+  <div style="width:100%; height:220px; border-radius:8px; background:linear-gradient(135deg,#2c5282,#1a2b4c);
+              display:flex; align-items:center; justify-content:center; color:white; font-size:18px; font-weight:600;">
+    🏫 Campus Image Placeholder
+  </div>
+</div>
+
+    <button type="submit">Submit Application</button>
+  </form>
+</div>
+
+</body>
+</html>
