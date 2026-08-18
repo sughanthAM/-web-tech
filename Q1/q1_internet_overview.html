@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Internet & Web Fundamentals</title>
+<style>
+  body { font-family: Arial, sans-serif; max-width: 900px; margin: auto; padding: 20px; line-height: 1.6; }
+  h1 { color: #1a2b4c; border-bottom: 3px solid #1a2b4c; }
+  h2 { color: #2c5282; margin-top: 30px; }
+  .box { background: #f0f4f8; padding: 15px; border-left: 4px solid #2c5282; margin: 10px 0; }
+  .diagram { text-align: center; margin: 15px 0; }
+  img { max-width: 100%; border: 1px solid #ccc; }
+  table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+  th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+  th { background: #1a2b4c; color: white; }
+</style>
+</head>
+<body>
+
+<h1>Web Fundamentals</h1>
+
+<!-- Internet Overview -->
+<h2>1. Internet Overview</h2>
+<div class="box">
+  The Internet is a global network of interconnected computers that communicate using standardized protocols
+  (TCP/IP) to share data, resources, and services across the world.
+</div>
+
+<!-- Network Concepts -->
+<h2>2. Fundamental Computer Network Concepts</h2>
+<div class="box">
+  <ul>
+    <li><b>Node:</b> Any device connected to the network</li>
+    <li><b>IP Address:</b> Unique numerical identifier for each device</li>
+    <li><b>Protocol:</b> Rules governing data communication (HTTP, TCP/IP, FTP)</li>
+    <li><b>Bandwidth:</b> Data transfer capacity of a network</li>
+  </ul>
+</div>
+
+<!-- URL Structure -->
+<h2>3. URL and its Structure</h2>
+<div class="diagram" style="background:#1a2b4c; color:#fff; padding:15px; border-radius:6px; font-family:monospace; font-size:18px;">
+  https<span style="color:#ffb703;">://</span>www.example.com<span style="color:#8ecae6;">:443</span><span style="color:#90be6d;">/path/page.html</span><span style="color:#f94144;">?query=1</span>
+</div>
+<table>
+  <tr><th>Part</th><th>Example</th><th>Meaning</th></tr>
+  <tr><td>Protocol</td><td>https://</td><td>Method of data transfer</td></tr>
+  <tr><td>Domain</td><td>www.example.com</td><td>Website address</td></tr>
+  <tr><td>Port</td><td>:443</td><td>Communication endpoint</td></tr>
+  <tr><td>Path</td><td>/path/page.html</td><td>Resource location</td></tr>
+  <tr><td>Query</td><td>?query=1</td><td>Extra parameters</td></tr>
+</table>
+
+<!-- Domain Name -->
+<h2>4. Domain Name</h2>
+<div class="box">
+  A domain name (e.g. <i>example.com</i>) is a human-readable address mapped to a numeric IP address via DNS
+  (Domain Name System), so users don't need to remember IP numbers.
+</div>
+
+<!-- Browsers and Servers -->
+<h2>5. Web Browsers and Web Servers</h2>
+<div class="box">
+  <b>Web Browser:</b> Client software (Chrome, Firefox) that requests and renders web pages.<br>
+  <b>Web Server:</b> Software/hardware (Apache, Nginx) that stores and delivers web pages to browsers on request.
+</div>
+
+<!-- Working Principle -->
+<h2>6. Working Principle of a Website</h2>
+<div class="diagram" style="display:flex; justify-content:center; align-items:center; gap:20px; padding:20px;">
+  <div style="background:#2c5282; color:white; padding:15px 25px; border-radius:8px;">Browser (Client)</div>
+  <div style="text-align:center; font-size:14px;">→ Request →<br>← Response ←</div>
+  <div style="background:#1a2b4c; color:white; padding:15px 25px; border-radius:8px;">Web Server</div>
+</div>
+<div class="box">
+  1. User enters URL in browser → 2. Browser sends HTTP request to server → 3. Server processes request →
+  4. Server sends back HTML/CSS/JS → 5. Browser renders the page.
+</div>
+
+<!-- Client vs Server -->
+<h2>7. Client-side vs Server-side Scripting</h2>
+<table>
+  <tr><th>Client-side</th><th>Server-side</th></tr>
+  <tr><td>Runs in the browser</td><td>Runs on the web server</td></tr>
+  <tr><td>Languages: HTML, CSS, JavaScript</td><td>Languages: PHP, Python, Node.js</td></tr>
+  <tr><td>Faster, reduces server load</td><td>Handles database, authentication</td></tr>
+</table>
+
+</body>
+</html>
