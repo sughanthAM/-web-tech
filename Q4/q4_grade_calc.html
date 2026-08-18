@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Grade Calculator</title>
+<style>
+  body { font-family: Arial, sans-serif; max-width: 500px; margin: 50px auto; background: #f0f4f8; padding: 20px; }
+  .container { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+  h2 { color: #1a2b4c; text-align: center; }
+  input { width: 100%; padding: 10px; margin: 8px 0; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; }
+  button { width: 100%; padding: 12px; background: #1a2b4c; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 15px; }
+  button:hover { background: #2c5282; }
+  #result { margin-top: 20px; padding: 15px; border-radius: 6px; background: #eef2f7; display: none; }
+  .pass { color: green; font-weight: bold; }
+  .fail { color: red; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Grade Calculator</h2>
+
+  <input type="number" id="sub1" placeholder="Subject 1 marks (0-100)">
+  <input type="number" id="sub2" placeholder="Subject 2 marks (0-100)">
+  <input type="number" id="sub3" placeholder="Subject 3 marks (0-100)">
+  <input type="number" id="sub4" placeholder="Subject 4 marks (0-100)">
+  <input type="number" id="sub5" placeholder="Subject 5 marks (0-100)">
+
+  <button onclick="calculateGrade()">Calculate</button>
+
+  <div id="result"></div>
+</div>
+
+<script src="q4_script.js"></script>
+</body>
+</html>
